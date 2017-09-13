@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# This script binds to AD and configures advanced options of the AD plugin
+# As this scripts contains a password, be sure to take appropriate security
+# precautions.
+
+# This script needs customization for your environment.
+
+## Check that root is running the script otherwise nothing works
+if [[ $EUID -ne 0 ]]; then
+   echo "This script must be run as root" 1>&2
+   exit 1
+fi
